@@ -1,0 +1,8 @@
+describe('Seção Curiosidades', () => {
+  it('Deve exibir a seção "Curiosidades" corretamente', () => {
+    cy.visit('caminho/para/sua/página.html');
+    cy.get('#curiosidades').should('exist');
+    cy.get('#curiosidades h2').contains('Curiosidades');
+    cy.get('#curiosidades p').should('have.length', 1);  // Verifica o número de parágrafos
+  });
+});
